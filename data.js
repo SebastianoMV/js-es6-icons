@@ -117,7 +117,7 @@ const icone = [
 function genera(i){
 	const output = `
 	<div class="col col-2 mt-2 mb-5 mx-2">
-    <div class="card d-flex align-items-centjustify-content-center" style="width: 100%; height: 100pborder-radius: 10px;  color: ${icone[i].color}; font-size: 50px;">
+    <div class="card d-flex align-items-center justify-content-center" style="width: 100%; height: 100px;border-radius: 10px;  color: ${icone[i].color}; font-size: 50px;">
       <i class="${icone[i].family} ${icone[i].prefix}${icone[i].name}"></i>
       <h5 class="card-title" style="color: black;">${icone[i].name}</h5>
     </div>
