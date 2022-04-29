@@ -1,0 +1,16 @@
+header{
+  height: 100px;
+  color: #29b1dd;
+}
+
+main{
+  background-color: #DDDDDD;
+  height: calc(100vh - 100px);
+}
+
+nav{
+  background-color: #29b1dd;
+  height: 80px;
+  color: white;
+}
+
