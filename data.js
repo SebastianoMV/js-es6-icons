@@ -141,7 +141,7 @@ function genera(i, nomeArray){
 	<div class="col col-2 mt-2 mb-5 mx-2">
     <div class="card d-flex align-items-center justify-content-center" style="width: 100%; height: 100px;border-radius: 10px;  color: ${nomeArray[i].color}; font-size: 50px;">
       <i class="${nomeArray[i].family} ${nomeArray[i].prefix}${nomeArray[i].name}"></i>
-      <h5 class="card-title" style="color: black;">${icone[i].name}</h5>
+      <h5 class="card-title" style="color: black;">${nomeArray[i].name}</h5>
     </div>
   </div>`
 	document.querySelector('.row').innerHTML += output;
