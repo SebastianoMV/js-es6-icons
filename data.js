@@ -113,12 +113,10 @@ const icone = [
 	}
 ];
 
-const iconFiltred = [];
-
 document.getElementById('from-select').addEventListener('change', function(){
-	iconFiltred.length = 0;
+	const iconFiltred = [];
 	let valueSelected = this.value;
-	generaFiltred(valueSelected);
+	generaFiltred(valueSelected , iconFiltred);
 	console.log(this.value);
 	document.querySelector('.row').innerHTML = '';
 	if(valueSelected !=null){
@@ -131,10 +129,7 @@ document.getElementById('from-select').addEventListener('change', function(){
 			genera(i,icone);
 		}
 	}
-
-
 });
-
 
 function genera(i, nomeArray){
 	const output = `
@@ -147,26 +142,19 @@ function genera(i, nomeArray){
 	document.querySelector('.row').innerHTML += output;
 }
 
-
 for(let i in icone){
 	genera(i,icone);
 }
 
-
-
-function generaFiltred (value){
+function generaFiltred (value,array){
   for (let i = 0; i < icone.length; i++) {
 		if(icone[i].type == value){ 
-			iconFiltred.push(icone[i]);
+			array.push(icone[i]);
 		 } 	
 	}
-  
 } 
 
-
-
 //Bocus 1
-
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -176,10 +164,7 @@ function getRandomColor() {
   return color;
 }
 
-
 // Bonus 2
-
-
 const optionArr = ['all','animal','vegetable','user']
 const form = document.querySelector('#from-select');
 function printOption() {
