@@ -151,6 +151,7 @@ function genera(i, nomeArray){
 for(let i in icone){
 	genera(i,icone);
 }
+dinamicSelect();
 
 
 
@@ -163,6 +164,10 @@ function generaFiltred (value){
   
 } 
 
+
+
+//Bocus 1
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -172,3 +177,10 @@ function getRandomColor() {
   return color;
 }
 
+
+// Bonus 2
+
+
+const optionArr = ['all','animal','vegetable','user']
+const form = document.getElementById('form-select');
+let selectedOption = optionArr[this.value];
