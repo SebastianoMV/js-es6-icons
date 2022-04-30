@@ -151,7 +151,6 @@ function genera(i, nomeArray){
 for(let i in icone){
 	genera(i,icone);
 }
-dinamicSelect();
 
 
 
@@ -182,5 +181,9 @@ function getRandomColor() {
 
 
 const optionArr = ['all','animal','vegetable','user']
-const form = document.getElementById('form-select');
-let selectedOption = optionArr[this.value];
+const form = document.querySelector('#from-select');
+function printOption() {
+	optionArr.forEach(element => form.appendChild(new Option(element, element)));
+	
+}
+printOption();
