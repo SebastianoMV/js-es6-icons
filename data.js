@@ -4,114 +4,115 @@ const icone = [
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'crow',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'dog',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'dove',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'dragon',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'horse',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'hippo',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'fish',
 		prefix: 'fa-',
 		type: 'animal',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'orange'
 	},
 	{
 		name: 'carrot',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'green'
 	},
 	{
 		name: 'apple-alt',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'green'
 	},
 	{
 		name: 'lemon',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'green'
 	},
 	{
 		name: 'pepper-hot',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'green'
 	},
 	{
 		name: 'user-astronaut',
 		prefix: 'fa-',
 		type: 'user',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'blue'
 	},
 	{
 		name: 'user-graduate',
 		prefix: 'fa-',
 		type: 'user',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'blue'
 	},
 	{
 		name: 'user-ninja',
 		prefix: 'fa-',
 		type: 'user',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'blue'
 	},
 	{
 		name: 'user-secret',
 		prefix: 'fa-',
 		type: 'user',
 		family: 'fas',
-		color: getRandomColor()
+		color: 'blue'
 	}
 ];
+
 
 document.getElementById('from-select').addEventListener('change', function(){
 	const iconFiltred = [];
@@ -132,6 +133,7 @@ document.getElementById('from-select').addEventListener('change', function(){
 });
 
 function genera(i, nomeArray){
+	icone[i].color = getRandomColor();
 	const output = `
 	<div class="col col-2 mt-2 mb-5 mx-2">
     <div class="card d-flex align-items-center justify-content-center" style="width: 100%; height: 100px;border-radius: 10px;  color: ${nomeArray[i].color}; font-size: 50px;">
