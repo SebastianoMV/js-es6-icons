@@ -136,7 +136,7 @@ function genera(i, nomeArray){
 	icone[i].color = getRandomColor();
 	const output = `
 	<div class="col col-2 mt-2 mb-5 mx-2">
-    <div class="card d-flex align-items-center justify-content-center" style="width: 100%; height: 100px;border-radius: 10px;  color: ${nomeArray[i].color}; font-size: 50px;">
+    <div class="card d-flex align-items-center justify-content-center;" style="width: 100%; height: 100px; border-radius: 10px;  color: ${nomeArray[i].color}; font-size: 50px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);">
       <i class="${nomeArray[i].family} ${nomeArray[i].prefix}${nomeArray[i].name}"></i>
       <h5 class="card-title" style="color: black;">${nomeArray[i].name}</h5>
     </div>
@@ -144,9 +144,6 @@ function genera(i, nomeArray){
 	document.querySelector('.row').innerHTML += output;
 }
 
-for(let i in icone){
-	genera(i,icone);
-}
 
 function generaFiltred (value,array){
   for (let i = 0; i < icone.length; i++) {
@@ -156,11 +153,16 @@ function generaFiltred (value,array){
 	}
 } 
 
+
+for(let i in icone){
+	genera(i,icone);
+}
+
 //Bocus 1
 function getRandomColor() {
-  const letters = '0123456789ABCDEF';
+  const letters = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
   let color = '#';
-  for (var i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
